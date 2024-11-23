@@ -1,7 +1,132 @@
 
+/*ID=#
+class= (.) ponto */
+
+
 /*Reset do navegador*/
 *{
-    margin: 0;
-    padding: 0;
-    background-color: silver;
+    margin: 0; /*margem*/
+    /* pode ser feita de diversas maneiras, quanto com 1,2,3,4 informações. 
+    com 1 valores para todas as margens
+    com 2 (primeiro valor superior e inferior) (segundo valor esquerda e direita)
+    com 3 (1° superior.2° direita e esquerda, 3° inferior)
+    com 4 (1° superior.2° direita 3° inferior 4° esquerda)
+
+    ex: margin: 10px 12px 10px 12px
+    
+    podemos usar também:
+    margin-top:10px;
+    margin-bottom: 10px;
+
+    margin-right: 10px;
+    margin-left: 10px; */
+    
+    padding: 0; /*preenchimento*/
+    list-style: none; /* retirar as bolinhas da lista */ 
+    text-decoration: none; /* retira o sublinhado do texto*/
+}
+
+body{
+        background-color: #1f1f1f; /* cor do fundo*/
+
+        /* a corde background pode ser utilizada de diversas formas 
+        como cor(escirto por extenso)background-color: blue
+        como RGB - background-color: rgb(red, green, blue, 0.1); 
+        Como hexadecimal com # background-color: #
+        */
+}
+
+
+a{ 
+/* a = href* do .html */
+  text-decoration: none;
+  color: #b08dce;
+}
+
+a:hover{
+/*ação interativa, "pseudo classe*/
+     color: #d5c1e6 
+}
+
+i{
+/* icone*/
+   color:#9650d3
+}
+
+#header{ 
+/* cabeçalho*/
+  display: flex; /* altera conforme formato do display*/
+  flex-flow: row wrap; /* quebra de linha*/
+  justify-content: space-between; /*ajusta tamanho na tela*/
+  align-items: center; /*alinha intens*/
+  width: 100%; /*largura, comprimento*/
+  padding: 5px 15px;
+  z-index: 2; /*sobrepõe dos elementos, layers*/
+} 
+
+.trocar-tema{
+    display: flex;
+    justify-content: flex-end; 
+}
+
+#trocarTema{
+    font-size: 20px;
+    color: #ffffff; /* cor dos icones fora a header*/
+    cursor:pointer; /* aparência cursor*/
+    transition: ;  
+}
+
+.menu{
+ display: flex;
+ align-items: center;
+ background-color: #060607;
+ gap: 15px; 
+}
+
+.menu-item{
+    width: 100%;
+}
+.menu-link{
+    display: flex;
+    align-items: center;
+    gap: 6px;   
+}
+
+.menu-mobile{
+ width: 100%;
+ position: fixed; /*posiç"ao do menu*/
+ bottom: 0; /* coloca o item em uma posição exata da tela*, bottom, tol, left,right*/
+ justify-content: space-between;
+ border-top: 1px solid #1f1f1f;
+}
+.menu-mobile .menu-link{
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 15px;
+}
+
+/*varios itens com a mesma propriedade*/
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text{
+
+ color:#a8327b;
+ font-size: 20px; /*aumenta o tamanho do objeto quando cursor passa pro cima*/ 
+ transition:0.05s /*tempo de transição*/
+}
+
+.menu-icon,
+.menu-text{
+  color: #;
+  font-weight: 50; /*altera a expessura da fonte*/ 
+}
+.menu-icon{
+ font-size: 18px;
+ color: #74439e 
+}
+
+.menu-text{
+   font-size: 14px;
+   text-transform: uppercase ; /*cria regras de texto, 1°maiúsucla...*/
 }
