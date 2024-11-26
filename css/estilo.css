@@ -214,7 +214,8 @@ color:#ffffff;
  .header-nav,{
   display:flex;
  }
-.header-nav,{
+.header-nav,
+.trocar-tema{
   min-width: 30%;
 }
   }
