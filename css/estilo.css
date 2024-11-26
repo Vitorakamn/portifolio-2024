@@ -73,13 +73,13 @@ i{
     font-size: 20px;
     color: #ffffff; /* cor dos icones fora a header*/
     cursor:pointer; /* aparência cursor*/
-    transition: ;  
+    /*transition: ; */
 }
 
 .menu{
  display: flex;
  align-items: center;
- background-color: #060607;
+ /*background-color: #060607;*/
  gap: 15px; 
 }
 
@@ -94,7 +94,7 @@ i{
 
 .menu-mobile{
  width: 100%;
- position: fixed; /*posiç"ao do menu*/
+ position: fixed; /*posição do menu*/
  bottom: 0; /* coloca o item em uma posição exata da tela*, bottom, tol, left,right*/
  justify-content: space-between;
  border-top: 1px solid #1f1f1f;
@@ -112,21 +112,109 @@ i{
 .menu-link:hover .menu-text{
 
  color:#a8327b;
- font-size: 20px; /*aumenta o tamanho do objeto quando cursor passa pro cima*/ 
+ font-size: 18px; /*aumenta o tamanho do objeto quando cursor passa pro cima*/ 
  transition:0.05s /*tempo de transição*/
 }
+.menu-social{
+    justify-content: center;
 
+  }
 .menu-icon,
 .menu-text{
-  color: #;
-  font-weight: 50; /*altera a expessura da fonte*/ 
+  color:#8431cc;
+  font-weight:100; /*altera a expessura da fonte*/ 
 }
 .menu-icon{
  font-size: 18px;
- color: #74439e 
+ color: #8431cc;
 }
 
 .menu-text{
-   font-size: 14px;
+   font-size: 12px;
    text-transform: uppercase ; /*cria regras de texto, 1°maiúsucla...*/
 }
+
+.header-nav{
+  display:none;
+
+} 
+
+.menu-principal{
+ gap: 16px;
+}
+
+.menu-social{
+ gap: 16px;
+ 
+}
+.btn{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 18px;
+  cursor: pointer; 
+  /* gap: 5px; */
+  /* width: ; */
+background: transparent;
+border:none;
+color:#ffffff;
+}
+.btn:hover{
+  transform: scale(1.05);
+  trnasition: ease-in-out .3s;/* se não tiver o ponto antes dos 3 segundo ele demorarã 3 segundos para iniciar a trasição, e não o tempo de demora da transição*/
+
+
+}.btn span,
+.btn i {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.btn-primary{
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+}
+  #home{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .main-ontent{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+  }
+  .video iframe{
+    width: 100%;
+    aspect-ratio: 16/9; /*alterar o aspecto do video*/ 
+
+  }
+  #home,
+  .projetos,
+  .sobre,
+  .contato{
+   padding: 40px 16px ;
+
+  }
+
+
+  /*telas - responsivas*/
+
+  @media(min-width:768px){ /* comprimento minimo para para tela responsiva (comprimento até) */
+ #header{
+  position:fixed;
+  border-bottom: 2px solid #421669;
+  padding:16px 96px;
+  background-color: #9650d3;
+ }
+ .nav-mobile{
+  display: none; 
+ }
+ .header-nav,{
+  display:flex;
+ }
+.header-nav,{
+  min-width: 30%;
+}
+  }
