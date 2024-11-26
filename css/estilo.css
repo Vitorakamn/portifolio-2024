@@ -1,7 +1,43 @@
+/*google fonts*/
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+</style>
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.roboto-serif-<uniquifier> {
+  font-family: "Roboto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "GRAD" 0;
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+}
+h1{
+  font-size:40px;
+  font-weight: 100;
+  color: #ffffff;
+  font-family:"Montserrat", sans-serif;
+  text-transform: uppercase;
+
+}
+b{
+  font-weight: 500px;
+}
 
 /*ID=#
 class= (.) ponto */
-
 
 /*Reset do navegador*/
 *{
@@ -24,6 +60,7 @@ class= (.) ponto */
     padding: 0; /*preenchimento*/
     list-style: none; /* retirar as bolinhas da lista */ 
     text-decoration: none; /* retira o sublinhado do texto*/
+    box-sizing: border-box;
 }
 
 body{
@@ -115,10 +152,10 @@ i{
  font-size: 18px; /*aumenta o tamanho do objeto quando cursor passa pro cima*/ 
  transition:0.05s /*tempo de transição*/
 }
-.menu-social{
+/* .menu-social{
     justify-content: center;
-
-  }
+deixar menu centralizado 
+  } */
 .menu-icon,
 .menu-text{
   color:#8431cc;
@@ -218,4 +255,40 @@ color:#ffffff;
 .trocar-tema{
   min-width: 30%;
 }
-  }
+#home,
+.projetos,
+.sobre{
+  padding: 128px 96px 64px 96px 
+}
+.main-content{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+h1{
+  font-size: 80px;
+  text-align: left; /* alinha o texto*/
+}
+  } /*fim786px*/
+
+@media(min-width: 922px){
+
+
+}  /*fim922px*/
+
+@media(min-width: 1200px){
+#home{
+  padding: 62px 96px 32px;
+}
+.main-content .btn{
+  width: auto;
+}
+}  /*fim 1200px*/
+
+@media(min-width: 1400px){
+.header{
+  padding:200ox 240px 32px;
+
+}
+}   /*fim 1400px*/
+
