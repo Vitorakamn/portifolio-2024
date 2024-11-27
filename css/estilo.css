@@ -1,48 +1,79 @@
+/*shift+ alt +f -ajusta identação*/
+/* comentário shift + alt + a */
 /*google fonts*/
-<style>
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-</style>
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+/* fontes usadas roboto, roboto serif, montserrat, poppins, inter */
 
-.roboto-serif-<uniquifier> {
-  font-family: "Roboto Serif", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100,
-    "GRAD" 0;
+/* tema dark */
+:root, :root[data-theme='dark']{
+      --cor-fundo: #1f1f1f; 
+      --cor-texto-padrao: #ffffff; 
+      
+      --cor-borda: ;
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+      --cor-titulo:#ffffff ;
+      --cor-subtitulo: ; 
+      --cor-texto: ;
 
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+      --cover-hover:#9650d3 ; 
+      --cor-menu:#ffffff ;
+      --cor-link:#a8327b ; 
+      --cor-icone:#9650d3 ;
+
 }
+
+/* tema light */
+:root, :root[data-theme='light']{
+  
+  --cor-fundo:#ffffff; 
+  --cor-texto-padrao: #1f1f1f; 
+
+  --cor-borda:  ;
+
+  --cor-titulo:#1f1f1f ;
+  --cor-subtitulo: ; 
+  --cor-texto: ;
+
+  
+  --cover-hover:#9650d3 ; 
+  --cor-menu:#1f1f1f ;
+  --cor-link:#a8327b ; 
+  --cor-icone:#9650d3 ;
 }
-h1{
-  font-size:40px;
+
+
+h1 {
+  font-size: 40px;
   font-weight: 100;
-  color: #ffffff;
-  font-family:"Montserrat", sans-serif;
+  color: var(--cor-titulo);
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 
 }
-b{
+
+b { /* negrito*/ 
   font-weight: 500px;
+  /* pode colocar a fonte tbm */ 
 }
 
+p, span, li {
+  font:16px;
+  font-family:"Montserrat";
+}
+  p{
+    text-align: justify;
+    
+
+  }
 /*ID=#
 class= (.) ponto */
 
 /*Reset do navegador*/
-*{
-    margin: 0; /*margem*/
-    /* pode ser feita de diversas maneiras, quanto com 1,2,3,4 informações. 
+* {
+  margin: 0;
+  /*margem*/
+  /* pode ser feita de diversas maneiras, quanto com 1,2,3,4 informações. 
     com 1 valores para todas as margens
     com 2 (primeiro valor superior e inferior) (segundo valor esquerda e direita)
     com 3 (1° superior.2° direita e esquerda, 3° inferior)
@@ -56,87 +87,106 @@ class= (.) ponto */
 
     margin-right: 10px;
     margin-left: 10px; */
-    
-    padding: 0; /*preenchimento*/
-    list-style: none; /* retirar as bolinhas da lista */ 
-    text-decoration: none; /* retira o sublinhado do texto*/
-    box-sizing: border-box;
+
+  padding: 0;
+  /*preenchimento*/
+  list-style: none;
+  /* retirar as bolinhas da lista */
+  text-decoration: none;
+  /* retira o sublinhado do texto*/
+  box-sizing: border-box;
 }
 
-body{
-        background-color: #1f1f1f; /* cor do fundo*/
+body {
+  background-color: var(--cor-fundo);
 
-        /* a corde background pode ser utilizada de diversas formas 
+
+  /* cor do fundo*/
+
+  /* a corde background pode ser utilizada de diversas formas 
         como cor(escirto por extenso)background-color: blue
         como RGB - background-color: rgb(red, green, blue, 0.1); 
         Como hexadecimal com # background-color: #
         */
+  color: var(--cor-texto-padrao)
 }
 
 
-a{ 
-/* a = href* do .html */
+a {
+  /* a = href* do .html */
   text-decoration: none;
   color: #b08dce;
 }
 
-a:hover{
-/*ação interativa, "pseudo classe*/
-     color: #d5c1e6 
+a:hover {
+  /*ação interativa, "pseudo classe*/
+  color: var(--cover-hover)
 }
 
-i{
-/* icone*/
-   color:#9650d3
+i {
+  /* icone*/
+  color: var(--cor-icone)
 }
 
-#header{ 
-/* cabeçalho*/
-  display: flex; /* altera conforme formato do display*/
-  flex-flow: row wrap; /* quebra de linha*/
-  justify-content: space-between; /*ajusta tamanho na tela*/
-  align-items: center; /*alinha intens*/
-  width: 100%; /*largura, comprimento*/
+#header {
+  /* cabeçalho*/
+  display: flex;
+  /* altera conforme formato do display*/
+  flex-flow: row wrap;
+  /* quebra de linha*/
+  justify-content: space-between;
+  /*ajusta tamanho na tela*/
+  align-items: center;
+  /*alinha intens*/
+  width: 100%;
+  /*largura, comprimento*/
   padding: 5px 15px;
-  z-index: 2; /*sobrepõe dos elementos, layers*/
-} 
-
-.trocar-tema{
-    display: flex;
-    justify-content: flex-end; 
+  z-index: 2;
+  /*sobrepõe dos elementos, layers*/
 }
 
-#trocarTema{
-    font-size: 20px;
-    color: #ffffff; /* cor dos icones fora a header*/
-    cursor:pointer; /* aparência cursor*/
-    /*transition: ; */
+.trocar-tema {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.menu{
- display: flex;
- align-items: center;
- /*background-color: #060607;*/
- gap: 15px; 
+#trocarTema {
+  font-size: 20px;
+  color: #ffffff;
+  /* cor dos icones fora a header*/
+  cursor: pointer;
+  /* aparência cursor*/
+  /*transition: ; */
 }
 
-.menu-item{
-    width: 100%;
-}
-.menu-link{
-    display: flex;
-    align-items: center;
-    gap: 6px;   
+.menu {
+  display: flex;
+  align-items: center;
+  /*background-color: #060607;*/
+  gap: 15px;
 }
 
-.menu-mobile{
- width: 100%;
- position: fixed; /*posição do menu*/
- bottom: 0; /* coloca o item em uma posição exata da tela*, bottom, tol, left,right*/
- justify-content: space-between;
- border-top: 1px solid #1f1f1f;
+.menu-item {
+  width: 100%;
 }
-.menu-mobile .menu-link{
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu-mobile {
+  width: 100%;
+  position: fixed;
+  /*posição do menu*/
+  bottom: 0;
+  /* coloca o item em uma posição exata da tela*, bottom, tol, left,right*/
+  justify-content: space-between;
+  border-top: 1px solid #1f1f1f;
+}
+
+.menu-mobile .menu-link {
   flex-direction: column;
   justify-content: center;
   padding: 8px 15px;
@@ -146,149 +196,183 @@ i{
 .menu-link.active .menu-icon,
 .menu-link.active .menu-text,
 .menu-link:hover .menu-icon,
-.menu-link:hover .menu-text{
+.menu-link:hover .menu-text {
 
- color:#a8327b;
- font-size: 18px; /*aumenta o tamanho do objeto quando cursor passa pro cima*/ 
- transition:0.05s /*tempo de transição*/
+  color: var(--cor-link);
+  font-size: 18px;
+  /*aumenta o tamanho do objeto quando cursor passa pro cima*/
+  transition: 0.05s
+    /*tempo de transição*/
 }
+
 /* .menu-social{
     justify-content: center;
 deixar menu centralizado 
   } */
 .menu-icon,
-.menu-text{
-  color:#8431cc;
-  font-weight:100; /*altera a expessura da fonte*/ 
-}
-.menu-icon{
- font-size: 18px;
- color: #8431cc;
+.menu-text {
+  color: var(--cor-menu);
+  font-weight: 100;
+  /*altera a expessura da fonte*/
 }
 
-.menu-text{
-   font-size: 12px;
-   text-transform: uppercase ; /*cria regras de texto, 1°maiúsucla...*/
+.menu-icon {
+  font-size: 18px;
+  color: #8431cc;
 }
 
-.header-nav{
-  display:none;
-
-} 
-
-.menu-principal{
- gap: 16px;
+.menu-text {
+  font-size: 12px;
+  text-transform: uppercase;
+  /*cria regras de texto, 1°maiúsucla...*/
 }
 
-.menu-social{
- gap: 16px;
- 
+.header-nav {
+  display: none;
+
 }
-.btn{
-  display:flex;
+
+.menu-principal {
+  gap: 16px;
+}
+
+.menu-social {
+  gap: 16px;
+
+}
+
+.btn {
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px 18px;
-  cursor: pointer; 
+  cursor: pointer;
   /* gap: 5px; */
   /* width: ; */
-background: transparent;
-border:none;
-color:#ffffff;
+  background: transparent;
+  border: none;
+  color: #ffffff;
 }
-.btn:hover{
+
+.btn:hover {
   transform: scale(1.05);
-  trnasition: ease-in-out .3s;/* se não tiver o ponto antes dos 3 segundo ele demorarã 3 segundos para iniciar a trasição, e não o tempo de demora da transição*/
+  transition: ease-in-out .3s;
+  /* se não tiver o ponto antes dos 3 segundo ele demorarã 3 segundos para iniciar a trasição, e não o tempo de demora da transição*/
 
 
-}.btn span,
+}
+
+.btn span,
 .btn i {
   font-size: 18px;
   text-transform: uppercase;
 }
-.btn-primary{
+
+.btn-primary {
   border: 1px solid #ffffff;
   border-radius: 15px;
 }
-  #home{
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
 
-  .main-ontent{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
-  }
-  .video iframe{
-    width: 100%;
-    aspect-ratio: 16/9; /*alterar o aspecto do video*/ 
-
-  }
-  #home,
-  .projetos,
-  .sobre,
-  .contato{
-   padding: 40px 16px ;
-
-  }
-
-
-  /*telas - responsivas*/
-
-  @media(min-width:768px){ /* comprimento minimo para para tela responsiva (comprimento até) */
- #header{
-  position:fixed;
-  border-bottom: 2px solid #421669;
-  padding:16px 96px;
-  background-color: #9650d3;
- }
- .nav-mobile{
-  display: none; 
- }
- .header-nav,{
-  display:flex;
- }
-.header-nav,
-.trocar-tema{
-  min-width: 30%;
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
+
+.main-ontent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  /*alterar o aspecto do video*/
+
+}
+
 #home,
 .projetos,
-.sobre{
-  padding: 128px 96px 64px 96px 
-}
-.main-content{
-  display:flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-h1{
-  font-size: 80px;
-  text-align: left; /* alinha o texto*/
-}
-  } /*fim786px*/
-
-@media(min-width: 922px){
-
-
-}  /*fim922px*/
-
-@media(min-width: 1200px){
-#home{
-  padding: 62px 96px 32px;
-}
-.main-content .btn{
-  width: auto;
-}
-}  /*fim 1200px*/
-
-@media(min-width: 1400px){
-.header{
-  padding:200ox 240px 32px;
+.sobre,
+.contato {
+  padding: 40px 16px;
 
 }
-}   /*fim 1400px*/
 
+
+/*telas - responsivas*/
+
+@media(min-width:768px) {
+
+  /* comprimento minimo para para tela responsiva (comprimento até) */
+  #header {
+    position: fixed;
+    border-bottom: 2px solid #421669;
+    padding: 16px 96px;
+    background-color: #9650d3;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .header-nav {
+    display: flex;
+  }
+
+  .header-nav,
+  .trocar-tema {
+    min-width: 30%;
+  }
+
+  #home,
+  .projetos,
+  .sobre {
+    padding: 128px 96px 64px 96px
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 80px;
+    text-align: left;
+    /* alinha o texto*/
+  }
+}
+
+/*fim786px*/
+
+@media(min-width: 992px) {}
+
+
+/*fim922px*/
+
+@media(min-width: 1200px) {
+  #home {
+    padding: 62px 96px 32px;
+  }
+
+  .main-content .btn {
+    width: auto;
+  }
+}
+
+/*fim 1200px*/
+
+@media(min-width: 1400px) {
+  .header {
+    padding: 200ox 240px 32px;
+
+  }
+  p, span, li {
+    font:20px;
+  }
+}
+
+/*fim 1400px*/
