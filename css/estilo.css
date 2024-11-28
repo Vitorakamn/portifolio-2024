@@ -8,20 +8,20 @@
 /* tema dark */
 :root, :root[data-theme='dark']{
       --cor-fundo: #1f1f1f; 
-      --cor-texto-padrao: #ffffff; 
+      --cor-texto-padrao: #ffffff; /*corpo do texto*/ 
       
       --cor-borda: ;
 
+      --cor-menudesktop:#56075e ;/* barra do menu no desktop*/
       --cor-titulo:#ffffff ;
-      --cor-subtitulo: ; 
-      --cor-texto: ;
+      --cor-subtitulo:#6e6e6e; 
+      --cor-textomenu:#f9dcff ;
 
-      --cover-hover:#9650d3 ; 
+      --cor-hover:#9650d3 ; 
       --cor-menu:#ffffff ;
-      --cor-link:#a8327b ; 
-      --cor-icone:#9650d3 ;
-      --trocar-tema:
-
+      --cor-link:#beb9b9  ; 
+      --cor-icone:#ffffff ;
+  
 }
 
 /* tema light */
@@ -32,15 +32,17 @@
 
   --cor-borda:  ;
 
+  --cor-menudesktop:#56075e ; /* barra do menu no desktop*/
   --cor-titulo:#1f1f1f ;
-  --cor-subtitulo: ; 
-  --cor-texto: ;
+  --cor-subtitulo:#6e6e6e; 
+  --cor-textomenu:#f9dcff ;
 
   
-  --cover-hover:#9650d3 ; 
+  --cor-hover:#9650d3 ; 
   --cor-menu:#1f1f1f ;
-  --cor-link:#a8327b ; 
+  --cor-link:#beb9b9 ; 
   --cor-icone:#9650d3 ;
+
 }
 
 
@@ -116,7 +118,7 @@ body {
 a {
   /* a = href* do .html */
   text-decoration: none;
-  color: #b08dce;
+  color: var(--cor-link);
 }
 
 a:hover {
@@ -154,6 +156,7 @@ i {
 #trocarTema {
   font-size: 20px;
   color: var(--cor-icone);
+  
   /* cor dos icones fora a header*/
   cursor: pointer;
   /* aparência cursor*/
@@ -199,7 +202,7 @@ i {
 .menu-link:hover .menu-icon,
 .menu-link:hover .menu-text {
 
-  color: var(--cor-link);
+  color: var(--cor-icone);
   font-size: 18px;
   /*aumenta o tamanho do objeto quando cursor passa pro cima*/
   transition: 0.05s
@@ -212,24 +215,25 @@ deixar menu centralizado
   } */
 .menu-icon,
 .menu-text {
-  color: var(--cor-menu);
+  color: var(--);
   font-weight: 100;
   /*altera a expessura da fonte*/
 }
 
 .menu-icon {
   font-size: 18px;
-  color: #8431cc;
+  color: var(--cor-icone);
 }
 
 .menu-text {
   font-size: 12px;
-  text-transform: uppercase;
-  /*cria regras de texto, 1°maiúsucla...*/
+  color:var(--cor-textomenu) ;
+  text-transform: uppercase; /*cria regras de texto, 1°maiúsucla...*/
 }
 
 .header-nav {
   display: none;
+  
 
 }
 
@@ -252,7 +256,7 @@ deixar menu centralizado
   /* width: ; */
   background: transparent;
   border: none;
-  color: #ffffff;
+  color: var(--cor-icone);  /*botao ver projetos"*/
 }
 
 .btn:hover {
@@ -270,7 +274,7 @@ deixar menu centralizado
 }
 
 .btn-primary {
-  border: 1px solid #ffffff;
+  border: 1px solid var(--cor-icone); 
   border-radius: 15px;
 }
 
@@ -280,7 +284,7 @@ deixar menu centralizado
   gap: 32px;
 }
 
-.main-ontent {
+.main-content {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -302,6 +306,27 @@ deixar menu centralizado
 
 }
 
+.projetos{
+  display:flex;
+  flex-direction: column;
+  gap: 32;
+
+}
+
+.projetos-container{
+  display: flex;
+  flex-direction:column;
+  gap: 64;
+}
+
+.img-card{
+  width: 100%;
+  border-radius: 36px;
+  object-fit: cover;
+  object-position: center;
+  
+}
+
 
 /*telas - responsivas*/
 
@@ -310,9 +335,9 @@ deixar menu centralizado
   /* comprimento minimo para para tela responsiva (comprimento até) */
   #header {
     position: fixed;
-    border-bottom: 2px solid #421669;
+    border-bottom: 2px solid var(--cor-icone);
     padding: 16px 96px;
-    background-color: #9650d3;
+    background-color: var(--cor-menudesktop);
   }
 
   .nav-mobile {
