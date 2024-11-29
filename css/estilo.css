@@ -1,47 +1,64 @@
 /*shift+ alt +f -ajusta identação*/
 /* comentário shift + alt + a */
 /*google fonts*/
-
+/* classe . 
+id # */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 /* fontes usadas roboto, roboto serif, montserrat, poppins, inter */
 
+/* variaveis para fontes */
+:root {
+  --fonte-texto: 'Poppins';
+  --fonte-Titulo: "Montserrat";
+  --fonte-menu: "Montserrat";
+  --fonte-chamadas: "Inter";
+  --fonte-icones: "Montserrat";
+}
+
 /* tema dark */
-:root, :root[data-theme='dark']{
-      --cor-fundo: #1f1f1f; 
-      --cor-texto-padrao: #ffffff; /*corpo do texto*/ 
-      
-      --cor-borda: ;
+:root,
+:root[data-theme='dark'] {
+  --cor-fundo: #1f1f1f;
+  --cor-texto-padrao: #ffffff;
+  /*corpo do texto*/
 
-      --cor-menudesktop:#56075e ;/* barra do menu no desktop*/
-      --cor-titulo:#ffffff ;
-      --cor-subtitulo:#6e6e6e; 
-      --cor-textomenu:#f9dcff ;
+  --cor-borda: ;
 
-      --cor-hover:#9650d3 ; 
-      --cor-menu:#ffffff ;
-      --cor-link:#beb9b9  ; 
-      --cor-icone:#ffffff ;
-  
+  --cor-menudesktop: #56075e;
+  /* barra do menu no desktop*/
+  --cor-titulo: #ffffff;
+  --cor-subtitulo: #6e6e6e;
+  --cor-textomenu: #f9dcff;
+
+  --cor-hover: #9650d3;
+  --cor-menu: #ffffff;
+  --cor-link: #beb9b9;
+  --cor-icone: #ffffff;
+  --trocar-tema: ;
+
 }
 
 /* tema light */
-:root, :root[data-theme='light']{
-  
-  --cor-fundo:#ffffff; 
-  --cor-texto-padrao: #1f1f1f; 
+:root,
+:root[data-theme='light'] {
 
-  --cor-borda:  ;
+  --cor-fundo: #ffffff;
+  --cor-texto-padrao: #1f1f1f;
 
-  --cor-menudesktop:#56075e ; /* barra do menu no desktop*/
-  --cor-titulo:#1f1f1f ;
-  --cor-subtitulo:#6e6e6e; 
-  --cor-textomenu:#f9dcff ;
+  --cor-borda: ;
 
-  
-  --cor-hover:#9650d3 ; 
-  --cor-menu:#1f1f1f ;
-  --cor-link:#beb9b9 ; 
-  --cor-icone:#9650d3 ;
+  --cor-menudesktop: #56075e;
+  /* barra do menu no desktop*/
+  --cor-titulo: #1f1f1f;
+  --cor-subtitulo: #6e6e6e;
+  --cor-textomenu: #f9dcff;
+
+
+  --cor-hover: #9650d3;
+  --cor-menu: #1f1f1f;
+  --cor-link: #727272;
+  --cor-icone: #9650d3;
+  --trocar-tema: ;
 
 }
 
@@ -55,20 +72,25 @@ h1 {
 
 }
 
-b { /* negrito*/ 
+b {
+  /* negrito*/
   font-weight: 500px;
-  /* pode colocar a fonte tbm */ 
+  /* pode colocar a fonte tbm */
 }
 
-p, span, li {
-  font:16px;
-  font-family:"Montserrat";
+p,
+span,
+li {
+  font: 16px;
+  font-family: "Montserrat";
 }
-  p{
-    text-align: justify;
-    
 
-  }
+p {
+  text-align: justify;
+
+
+}
+
 /*ID=#
 class= (.) ponto */
 
@@ -93,7 +115,7 @@ class= (.) ponto */
 
   padding: 0;
   /*preenchimento*/
-  list-style: none;
+
   /* retirar as bolinhas da lista */
   text-decoration: none;
   /* retira o sublinhado do texto*/
@@ -123,12 +145,13 @@ a {
 
 a:hover {
   /*ação interativa, "pseudo classe*/
-  color: var(--cover-hover)
-}
+  color: var(--cover-hover);
 
-i {
-  /* icone*/
-  color: var(--cor-icone)
+
+  i {
+    /* icone*/
+    color: var(--cor-icone)
+  }
 }
 
 #header {
@@ -156,7 +179,7 @@ i {
 #trocarTema {
   font-size: 20px;
   color: var(--cor-icone);
-  
+
   /* cor dos icones fora a header*/
   cursor: pointer;
   /* aparência cursor*/
@@ -168,6 +191,7 @@ i {
   align-items: center;
   /*background-color: #060607;*/
   gap: 15px;
+  list-style: none;
 }
 
 .menu-item {
@@ -227,13 +251,13 @@ deixar menu centralizado
 
 .menu-text {
   font-size: 12px;
-  color:var(--cor-textomenu) ;
-  text-transform: uppercase; /*cria regras de texto, 1°maiúsucla...*/
+  color: var(--cor-textomenu);
+  text-transform: uppercase;
+  /*cria regras de texto, 1°maiúsucla...*/
 }
 
 .header-nav {
   display: none;
-  
 
 }
 
@@ -243,7 +267,6 @@ deixar menu centralizado
 
 .menu-social {
   gap: 16px;
-
 }
 
 .btn {
@@ -256,7 +279,8 @@ deixar menu centralizado
   /* width: ; */
   background: transparent;
   border: none;
-  color: var(--cor-icone);  /*botao ver projetos"*/
+  color: var(--cor-icone);
+  /*botao ver projetos"*/
 }
 
 .btn:hover {
@@ -274,7 +298,7 @@ deixar menu centralizado
 }
 
 .btn-primary {
-  border: 1px solid var(--cor-icone); 
+  border: 1px solid var(--cor-icone);
   border-radius: 15px;
 }
 
@@ -306,27 +330,104 @@ deixar menu centralizado
 
 }
 
-.projetos{
-  display:flex;
-  flex-direction: column;
-  gap: 32;
-
-}
-
-.projetos-container{
+.projetos {
   display: flex;
-  flex-direction:column;
-  gap: 64;
+  flex-direction: column;
+  gap: 32px;
+
 }
 
-.img-card{
+.projetos h2 {
+  text-align: left;
+  font-family: var(--fonte-Titulo);
+  color: var(--cor-titulo);
+  margin-bottom: 100px;
+}
+
+.projetos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+}
+
+.img-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   width: 100%;
   border-radius: 36px;
   object-fit: cover;
   object-position: center;
-  
+  box-shadow: 3px 3px 3px #ffffff49;
 }
 
+.card-title {
+  /* h3 */
+  font-size: 32px;
+  color: var(--cor-subtitulo);
+  font-weight: 200;
+  font-family: var(--fonte-chamadas);
+}
+
+.card-descricao {
+  color: var(--cor-texto-padrao);
+  font-size: 18px;
+  font-family: "Roboto";
+
+}
+
+.card-lista {
+  font-family: var(--fonte-texto);
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+.card-lista .card-item {
+  font-size: 12px;
+  font-family: var(--cor-link);
+  margin: 10px 0 20px 0;
+  margin-left: 15px;
+}
+
+.
+/* card-lista .card-item:nth-child(3) -  margin-bottom: 50px;  cria margens entre as listas */
+
+
+.icone.seta {
+  color: var(--cor-menudesktop);
+}
+
+.card-button,
+.card-descricao {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+}
+
+.card-button .btn span {
+
+  color: #9650d3;
+  font-family: var(--fonte-icones);
+}
+
+.card-button .btn span:hover {
+  /* quando passas o mouse por cima efeito de mudar de cor */
+
+  color: #830b91;
+  font-family: var(--fonte-icones);
+}
+
+
+.card-button .btn i {
+  color: var(--cor-icone)
+}
 
 /*telas - responsivas*/
 
@@ -370,11 +471,43 @@ deixar menu centralizado
     text-align: left;
     /* alinha o texto*/
   }
+
+  h2 {
+    font-size: 60px;
+  }
 }
 
-/*fim786px*/
+/*a partir de  768px*/
 
-@media(min-width: 992px) {}
+/* até 768 */
+@media(max-width:768px) {
+  .projetos h2 {
+    font-size: 80px
+  }
+}
+
+
+
+@media(min-width: 992px) {
+
+  .projeto-card {
+    flex-direction: row;
+    /* regra que ajusta o texto em linhas, para telas menores que 992px */
+  }
+
+  .card-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .img-card {
+    width: 55%;
+
+  }
+
+  .projetos h2 {
+    font-size: 60px;
+  }
+}
 
 
 /*fim922px*/
@@ -396,8 +529,21 @@ deixar menu centralizado
     padding: 200ox 240px 32px;
 
   }
-  p, span, li {
-    font:20px;
+
+  p,
+  span,
+  li {
+    font: 20px;
+  }
+
+  h1 {
+    font-size: 100px;
+    /* text-align:justify; */
+  }
+
+  .projetos h2 {
+    font-size: 90px;
+
   }
 }
 
