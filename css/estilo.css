@@ -476,7 +476,74 @@ deixar menu centralizado
   gap: 18px;
 }
 
+.sobre-icones{
+  display:flex;
+  align-items:right;
+  gap:18px;
+}
 
+.sobre-icones i{
+  font-size: 18px;
+  color:var( --cor-icone);
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col2 .row2{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+h3{
+  font-size: 20px;
+  font-family: var(--fonte-texto);
+  /* color */
+  margin-bottom: 10px;
+  text-align: left;
+
+}
+.accordion-header{
+  width:100%;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--cor-hover);
+  text-align: left;
+  cursor:pointer;
+  transition: ease-in-out .3s;
+
+}
+
+.accordion-header span{
+  color: var(--cor-texto-padrao);
+}
+.accordion-body{
+  display: ; 
+  padding: 18px;
+  text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:20px;
+  /* border: 1px solid var(--cor-icone) */
+}
+
+.accordion-body p{
+  font-family: 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border:1px solid var(--cor-link)
+
+}
 /*telas - responsivas*/
 
 @media(min-width:768px) {
