@@ -1,0 +1,697 @@
+/*shift+ alt +f -ajusta identação*/
+/* comentário shift + alt + a */
+/*google fonts*/
+/* classe . 
+id # */
+/* https://favicon.io/ cria imagens em codigo ico, formando icones */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* fontes usadas roboto, roboto serif, montserrat, poppins, inter */
+
+/* variaveis para fontes */
+:root {
+  --fonte-texto: 'Poppins';
+  --fonte-Titulo: "Montserrat";
+  --fonte-menu: "Montserrat";
+  --fonte-chamadas: "Inter";
+  --fonte-icones: "Montserrat";
+}
+
+/* tema dark */
+:root,
+:root[data-theme='dark'] {
+  --cor-fundo: #1f1f1f;
+  --cor-texto-padrao: #ffffff;
+  /*corpo do texto*/
+
+  --cor-borda: ;
+
+  --cor-menudesktop: #56075e;
+  /* barra do menu no desktop*/
+  --cor-titulo: #ffffff;
+  --cor-subtitulo: #6e6e6e;
+  --cor-textomenu: #f9dcff;
+
+  --cor-hover: #9650d3;
+  --cor-menu: #ffffff;
+  --cor-link: #beb9b9;
+  --cor-icone: #ffffff;
+  --trocar-tema: ;
+
+}
+
+/* tema light */
+:root,
+:root[data-theme='light'] {
+
+  --cor-fundo: #ffffff;
+  --cor-texto-padrao: #1f1f1f;
+
+  --cor-borda: ;
+
+  --cor-menudesktop: #56075e;
+  /* barra do menu no desktop*/
+  --cor-titulo: #1f1f1f;
+  --cor-subtitulo: #6e6e6e;
+  --cor-textomenu: #f9dcff;
+
+
+  --cor-hover: #9650d3;
+  --cor-menu: #1f1f1f;
+  --cor-link: #727272;
+  --cor-icone: #9650d3;
+  --trocar-tema: ;
+
+}
+
+
+h1 {
+  font-size: 40px;
+  font-weight: 100;
+  color: var(--cor-titulo);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+
+}
+
+b {
+  /* negrito*/
+  font-weight: 500px;
+  /* pode colocar a fonte tbm */
+}
+
+p,
+span,
+li {
+  font: 16px;
+  font-family: "Montserrat";
+}
+
+p {
+  text-align: justify;
+
+
+}
+
+/*ID=#
+class= (.) ponto */
+
+/* logo */
+html[data-theme="dark"] .logo {
+  filter: invert(1);
+  /* invert cria um negativo da imagem invet (0); invert (1). */
+}
+
+/*Reset do navegador*/
+* {
+  margin: 0;
+  /*margem*/
+  /* pode ser feita de diversas maneiras, quanto com 1,2,3,4 informações. 
+    com 1 valores para todas as margens
+    com 2 (primeiro valor superior e inferior) (segundo valor esquerda e direita)
+    com 3 (1° superior.2° direita e esquerda, 3° inferior)
+    com 4 (1° superior.2° direita 3° inferior 4° esquerda)
+
+    ex: margin: 10px 12px 10px 12px
+    
+    podemos usar também:
+    margin-top:10px;
+    margin-bottom: 10px;
+
+    margin-right: 10px;
+    margin-left: 10px; */
+
+  padding: 0;
+  /*preenchimento*/
+
+  /* retirar as bolinhas da lista */
+  text-decoration: none;
+  /* retira o sublinhado do texto*/
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-fundo);
+
+
+  /* cor do fundo*/
+
+  /* a corde background pode ser utilizada de diversas formas 
+        como cor(escirto por extenso)background-color: blue
+        como RGB - background-color: rgb(red, green, blue, 0.1); 
+        Como hexadecimal com # background-color: #
+        */
+  color: var(--cor-texto-padrao)
+}
+
+
+a {
+  /* a = href* do .html */
+  text-decoration: none;
+  color: var(--cor-link);
+}
+
+a:hover {
+  /*ação interativa, "pseudo classe*/
+  color: var(--cover-hover);
+
+
+  i {
+    /* icone*/
+    color: var(--cor-icone)
+  }
+}
+
+#header {
+  /* cabeçalho*/
+  display: flex;
+  /* altera conforme formato do display*/
+  flex-flow: row wrap;
+  /* quebra de linha*/
+  justify-content: space-between;
+  /*ajusta tamanho na tela*/
+  align-items: center;
+  /*alinha intens*/
+  width: 100%;
+  /*largura, comprimento*/
+  padding: 5px 15px;
+  z-index: 2;
+  /*sobrepõe dos elementos, layers*/
+}
+
+.header-logo .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.trocar-tema {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#trocarTema {
+  font-size: 20px;
+  color: var(--cor-icone);
+
+  /* cor dos icones fora a header*/
+  cursor: pointer;
+  /* aparência cursor*/
+  /*transition: ; */
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  /*background-color: #060607;*/
+  gap: 15px;
+  list-style: none;
+}
+
+.menu-item {
+  width: 100%;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.menu-mobile {
+  width: 100%;
+  position: fixed;
+  /*posição do menu*/
+  bottom: 0;
+  /* coloca o item em uma posição exata da tela*, bottom, tol, left,right*/
+  justify-content: space-between;
+  border-top: 1px solid #1f1f1f;
+}
+
+.menu-mobile .menu-link {
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 15px;
+}
+
+/*varios itens com a mesma propriedade*/
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+
+  color: var(--cor-icone);
+  font-size: 18px;
+  /*aumenta o tamanho do objeto quando cursor passa pro cima*/
+  transition: 0.05s
+    /*tempo de transição*/
+}
+
+/* .menu-social{
+    justify-content: center;
+deixar menu centralizado 
+  } */
+.menu-icon,
+.menu-text {
+  color: var(--);
+  font-weight: 100;
+  /*altera a expessura da fonte*/
+}
+
+.menu-icon {
+  font-size: 18px;
+  color: var(--cor-icone);
+}
+
+.menu-text {
+  font-size: 12px;
+  color: var(--cor-textomenu);
+  text-transform: uppercase;
+  /*cria regras de texto, 1°maiúsucla...*/
+}
+
+.header-nav {
+  display: none;
+
+}
+
+.menu-principal {
+  gap: 16px;
+}
+
+.menu-social {
+  gap: 16px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 18px;
+  cursor: pointer;
+  /* gap: 5px; */
+  /* width: ; */
+  background: transparent;
+  border: none;
+  color: var(--cor-icone);
+  /*botao ver projetos"*/
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  transition: ease-in-out .3s;
+  /* se não tiver o ponto antes dos 3 segundo ele demorarã 3 segundos para iniciar a trasição, e não o tempo de demora da transição*/
+
+
+}
+
+.btn span,
+.btn i {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  border: 1px solid var(--cor-icone);
+  border-radius: 15px;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  /*alterar o aspecto do video*/
+
+}
+
+#home,
+.projetos,
+.sobre,
+.contato {
+  padding: 40px 16px;
+
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+}
+
+.projetos h2 {
+  text-align: left;
+  font-family: var(--fonte-Titulo);
+  color: var(--cor-titulo);
+  margin-bottom: 100px;
+}
+
+.projetos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.projeto-card {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+}
+
+.img-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  border-radius: 36px;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 3px 3px 3px #ffffff49;
+}
+
+.card-title {
+  /* h3 */
+  font-size: 32px;
+  color: var(--cor-subtitulo);
+  font-weight: 200;
+  font-family: var(--fonte-chamadas);
+}
+
+.card-descricao {
+  color: var(--cor-texto-padrao);
+  font-size: 18px;
+  font-family: "Roboto";
+
+}
+
+.card-lista {
+  font-family: var(--fonte-texto);
+  list-style-type: none;
+  margin-bottom: 15px;
+}
+
+.card-lista .card-item {
+  font-size: 12px;
+  font-family: var(--cor-link);
+  margin: 10px 0 20px 0;
+  margin-left: 15px;
+}
+
+
+/* card-lista .card-item:nth-child(3) -  margin-bottom: 50px;  cria margens entre as listas */
+
+
+.icone .seta {
+  color: var(--cor-menudesktop);
+}
+
+.card-button,
+.card-descricao {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+}
+
+.card-button .btn span {
+
+  color: #9650d3;
+  font-family: var(--fonte-icones);
+}
+
+.card-button .btn span:hover {
+  /* quando passas o mouse por cima efeito de mudar de cor */
+
+  color: #830b91;
+  font-family: var(--fonte-icones);
+}
+
+
+.card-button .btn i {
+  color: var(--cor-icone)
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sobre-content1,
+.sobre-content2
+
+/* formação e cursos */
+  {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.sobre-logo {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 8px solid var(--cor-icone);
+}
+
+.sobre-descricao {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+}
+
+.sobre-icones {
+  display: flex;
+  align-items: right;
+  gap: 18px;
+}
+
+.sobre-icones i {
+  font-size: 18px;
+  color: var(--cor-icone);
+}
+
+.sobre-content2 .col1,
+.sobre-content2 .col2 {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.sobre-content2 .col1 .row1,
+.sobre-content2 .col2 .row2 {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: var(--fonte-texto);
+  /* color */
+  margin-bottom: 10px;
+  text-align: left;
+
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: 1px solid var(--cor-hover);
+  text-align: left;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+
+}
+
+.accordion-header span,
+.accordion-header i {
+  color: var(--cor-texto-padrao);
+}
+
+.accordion-body {
+  display: none;
+  padding: 18px;
+  text-align: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  /* border: 1px solid var(--cor-icone) */
+}
+
+.accordion-body p {
+  font-family: 18px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  /*   border:1px solid var(--cor-link) */
+}
+
+.accordion-item.active .accordion-body {
+  display: flex;
+}
+
+.accordion-item.active .bi-caret-down-fill{
+  transform: rotate(180deg);
+transition: ease-in-out;
+}
+
+.accordion-item.active .accordion-header{
+  background: var(--cor-hover);
+  transition: none;
+}
+
+/*telas - responsivas*/
+
+@media(min-width:768px) {
+
+  /* comprimento minimo para para tela responsiva (comprimento até) */
+  #header {
+    position: fixed;
+    border-bottom: 2px solid var(--cor-icone);
+    padding: 16px 96px;
+    background-color: var(--cor-menudesktop);
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .header-nav {
+    display: flex;
+  }
+
+  .header-nav,
+  .trocar-tema {
+    min-width: 30%;
+  }
+
+  #home,
+  .projetos,
+  .sobre {
+    padding: 128px 96px 64px 96px
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 {
+    font-size: 80px;
+    text-align: left;
+    /* alinha o texto*/
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+}
+
+/*a partir de  768px*/
+
+/* até 768 */
+@media(max-width:768px) {
+  .projetos h2 {
+    font-size: 80px
+  }
+}
+
+
+
+@media(min-width: 992px) {
+
+  .projeto-card {
+    flex-direction: row;
+    /* regra que ajusta o texto em linhas, para telas menores que 992px */
+  }
+
+  .card-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .img-card {
+    width: 55%;
+
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+
+  .sobre {
+    gap: 80px;
+  }
+
+  .sobre-content1,
+  .sobre-content2 {
+
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 64px;
+
+  }
+}
+
+
+/*fim922px*/
+
+@media(min-width: 1200px) {
+  #home {
+    padding: 62px 96px 32px;
+  }
+
+  .main-content .btn {
+    width: auto;
+  }
+}
+
+/*fim 1200px*/
+
+@media(min-width: 1400px) {
+  .header {
+    padding: 200ox 240px 32px;
+
+  }
+
+  p,
+  span,
+  li {
+    font: 20px;
+  }
+
+  h1 {
+    font-size: 100px;
+    /* text-align:justify; */
+  }
+
+  .projetos h2 {
+    font-size: 90px;
+
+  }
+}
+
+/*fim 1400px*/
