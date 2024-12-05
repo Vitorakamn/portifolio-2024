@@ -476,32 +476,32 @@ deixar menu centralizado
   gap: 18px;
 }
 
-.sobre-icones{
-  display:flex;
-  align-items:right;
-  gap:18px;
+.sobre-icones {
+  display: flex;
+  align-items: right;
+  gap: 18px;
 }
 
-.sobre-icones i{
+.sobre-icones i {
   font-size: 18px;
-  color:var( --cor-icone);
+  color: var(--cor-icone);
 }
 
 .sobre-content2 .col1,
-.sobre-content2 .col2{
+.sobre-content2 .col2 {
   display: flex;
   flex-direction: column;
   text-align: justify;
 }
 
 .sobre-content2 .col1 .row1,
-.sobre-content2 .col2 .row2{
+.sobre-content2 .col2 .row2 {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-h3{
+h3 {
   font-size: 20px;
   font-family: var(--fonte-texto);
   /* color */
@@ -509,8 +509,9 @@ h3{
   text-align: left;
 
 }
-.accordion-header{
-  width:100%;
+
+.accordion-header {
+  width: 100%;
   display: flex;
   padding: 8px 16px;
   justify-content: space-between;
@@ -518,32 +519,76 @@ h3{
   background: transparent;
   border: 1px solid var(--cor-hover);
   text-align: left;
-  cursor:pointer;
+  cursor: pointer;
   transition: ease-in-out .3s;
 
 }
 
-.accordion-header span{
+.accordion-header span,
+.accordion-header i {
   color: var(--cor-texto-padrao);
 }
-.accordion-body{
-  display: ; 
+
+.accordion-body {
+  display: none;
   padding: 18px;
   text-align: center;
   flex-direction: column;
   align-items: flex-start;
-  gap:20px;
+  gap: 20px;
   /* border: 1px solid var(--cor-icone) */
 }
 
-.accordion-body p{
+.accordion-body p {
   font-family: 18px;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  border:1px solid var(--cor-link)
-
+  /*   border:1px solid var(--cor-link) */
 }
+
+.accordion-item.active .accordion-body {
+  display: flex;
+}
+
+.accordion-item.active .bi-caret-down-fill{
+  transform: rotate(180deg);
+transition: ease-in-out;
+}
+
+.accordion-item.active .accordion-header{
+  background: var(--cor-hover);
+  transition: none;
+}
+
+.accordion-item{
+width: 650px;
+display: flex;
+flex-direction: column;
+padding-right: 16px;
+}
+.contato{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 20px;
+padding: 40px 16px;
+border-top:1px solid var(--cor-menu);
+border-bottom: 1px solid var(--cor-menu);
+}
+
+.contato p{
+  text-align: center;
+}
+
+.contato button{
+  margin-bottom: 80px;
+  
+}
+
+
+
 /*telas - responsivas*/
 
 @media(min-width:768px) {
@@ -598,6 +643,12 @@ h3{
 @media(max-width:768px) {
   .projetos h2 {
     font-size: 80px
+  }
+  .accordiion-item{
+    width: 90vw; viewporviewport-width;
+  }
+  .contato{
+    padding: 90px;
   }
 }
 
