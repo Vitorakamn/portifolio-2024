@@ -555,25 +555,69 @@
                 </a>
             <li> -->
 
-            <a CLASS="menu-link" href="mailto:vitort.akamn@gmail.com" target="blank">
+            <a Clas="menu-link" href="mailto:vitort.akamn@gmail.com" target="blank">
                 <botton class="btn btn-primary ">
                     <span> vitort.akamn@gmail.com</span>
                 </botton>
             </a>
+            <br>
+            <div class="form-contato">
+                <form action="https://formspree.io/f/xovqbnaz" method="post">
+                    <!-- formspree - codigo aberto para criar caixas de formulário para contatos  -->
+
+                    <label for="name">Nome Completo</label><!-- etiqueta -->
+                    <input type="text" name="name" placeholder="Nome Completo" required> <!-- campo de preenchimento -->
+
+                    <br>
+                    <label for="name">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    <br>
+                    <label for="Telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" 
+                     pattern="\d{11}" required>
+                    <label for=""> Data de nascimento</label>
+                    <br>
+                    <input type="date" name="data de nascimento" required>
+                    <button type="submit">
+                        Enviar
+                    </button>
+ <!-- pattern="\(\d{2}\) \d{5}-\d{4}" exige formato com () e -
+ ou  pattern="\d{11}" considera apena 11 caracteres-->
+     
+            </div>
+         <!--    <button type="submit">
+                Enviar
+            </button> -->
+
+            </form>
+
+
+
+
+
+
+
+
+
+
         </ul>
     </section>
     <!-- fim contato  -->
-    
+
+
+
     <footer> <!-- rodape -->
-<p>
-    &copy; 2024. Portfolio desenvolvido para fins educativos com base nas aulas no <a href="https://sp.senai.br/unidade/leopoldina"
-    target="_blank"> Senai Leopoldina - SP</a>
-Desenvolvido Portfolio<a href="https://github.com/Vitorakamn" target="_blank">
-    Vitor Akamine
-</a>
+        <p>
+            &copy; 2024. Portfolio desenvolvido para fins educativos com base nas aulas no
+            <a href="https://sp.senai.br/unidade/leopoldina" target="_blank">
+                Senai Leopoldina - SP
+            </a>
+            Desenvolvido Por <a href="https://github.com/Vitorakamn" target="_blank">
+                <i class="menu-icon bi bi-github"></i> Vitor Akamine
+            </a>
 
 
-</p>
+        </p>
 
     </footer>
 

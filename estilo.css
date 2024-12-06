@@ -225,6 +225,7 @@ a:hover {
   /* coloca o item em uma posição exata da tela*, bottom, tol, left,right*/
   justify-content: space-between;
   border-top: 1px solid #1f1f1f;
+  background-color: var(--cor-hover);
 }
 
 .menu-mobile .menu-link {
@@ -551,15 +552,56 @@ h3 {
   display: flex;
 }
 
-.accordion-item.active .bi-caret-down-fill{
+.accordion-item.active .bi-caret-down-fill {
   transform: rotate(180deg);
-transition: ease-in-out;
+  transition: ease-in-out;
 }
 
-.accordion-item.active .accordion-header{
+.accordion-item.active .accordion-header {
   background: var(--cor-hover);
   transition: none;
 }
+
+.accordion-item {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 16px;
+  border-top: 1px solid var(--cor-menu);
+  border-bottom: 1px solid var(--cor-menu);
+}
+
+.contato p {
+  text-align: center;
+}
+
+.contato button {
+  margin-bottom: 80px;
+
+}
+
+footer {
+  margin-bottom: 80PX;
+}
+
+footer P {
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a{
+color: var(--cor-hover);
+} 
 
 /*telas - responsivas*/
 
@@ -607,6 +649,11 @@ transition: ease-in-out;
   h2 {
     font-size: 60px;
   }
+
+  footer{
+    margin: 0;
+    
+  }
 }
 
 /*a partir de  768px*/
@@ -615,6 +662,15 @@ transition: ease-in-out;
 @media(max-width:768px) {
   .projetos h2 {
     font-size: 80px
+  }
+
+  .accordiion-item {
+    width: 90vw;
+    viewporviewport-width;
+  }
+
+  .contato {
+    padding: 90px;
   }
 }
 
