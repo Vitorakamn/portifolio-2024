@@ -339,7 +339,7 @@ deixar menu centralizado
 #home,
 .projetos,
 .sobre,
-.contato {
+.contatos {
   padding: 40px 16px;
 
 }
@@ -599,9 +599,94 @@ footer P {
   padding: 20px;
 }
 
-footer a{
-color: var(--cor-hover);
-} 
+footer a {
+  color: var(--cor-hover);
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  width: 300px;
+  margin: 0 auto;
+  background: var(--cor-menu);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--cor-borda);
+}
+
+.form-contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Estilo geral para a formatação do formulário */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+ max-width: 800px;
+}
+
+/* Estilo para os labels */
+.form-contato label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+/* Estilo para os inputs */
+.form-contato input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.form-contato textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+  
+}
+
+/* Estilo ao focar nos campos (inputs e textarea) */
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: var(--cor-hover);
+}
+
+/* Estilo para o botão de envio */
+.form-contato button {
+  background-color: var(--cor-menudesktop);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Mudança de cor ao passar o mouse sobre o botão */
+.form-contato button:hover {
+  background-color: #2b0230;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 
 /*telas - responsivas*/
 
@@ -650,9 +735,9 @@ color: var(--cor-hover);
     font-size: 60px;
   }
 
-  footer{
+  footer {
     margin: 0;
-    
+
   }
 }
 

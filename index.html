@@ -15,11 +15,12 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilo.css">
 
-
-
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- AOS PARA EFEITOS DE TRANSIÇÃO NO SITE
+         https://michalsnik.github.io/aos/  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -100,7 +101,7 @@
             <li class="menu-item">
                 <a class="menu-link" href="#projetos">
                     <i class="menu-icon bi bi-globe-americas"></i>
-                    <span class="menu-text"> onde me encontrar </span>
+                    <span class="menu-text"> contatos </span>
                 </a>
 
 
@@ -111,7 +112,8 @@
 
     <main id="home"> <!--introdução -->
 
-        <div class="main-content">
+        <div data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+            class="main-content">
             <h1> <b>Designando o futuro, hoje</b> </h1>
             <p> Vitor Akamine,São Paulo -SP, Designer de Produto</p>
             <!-- <o h1 çe um recurso que pode ser utilizado como peso da fonte na landing, asssim quanto maior o número menos o grau de importância 
@@ -250,7 +252,7 @@
 
                 <div class="card-body">
 
-                    <h3 class=""> Case para Isqueiro </h3>
+                    <h3 class=""> Cobogó triangular</h3>
                     <p class="card-descricao"> Projeto Acadêmicorealizado no primeiro semestre de 2023</p>
 
                     <ul class="card-lista">
@@ -301,32 +303,32 @@
             </div><!-- fim projeto 2 -->
             <div class="projeto-card">
 
-                <img src="img/case.png"
+                <img src="img/modulos.png"
                     alt="imagem mostra uma pessoa dentro do elevador, ela esta de frente focando no acessório preso em sua cintura."
                     class="img-card">
 
                 <!-- 600 x 400 px pra n perder qualidade -->
                 <!-- alt="" = texto alternativo, audiodescrição -->
-
+                <!-- inicio projeto 3 -->
                 <div class="card-body">
 
-                    <h3 class=""> Case para Isqueiro </h3>
-                    <p class="card-descricao"> Projeto Acadêmico realizado no segundo semestre de 2023</p>
+                    <h3 class=""> Módulos </h3>
+                    <p class="card-descricao"> Projeto Acadêmico realizado noprimeiro semestre de 2023</p>
 
                     <ul class="card-lista">
 
                         <li class="card-item">
                             <!--o que mais chama a atencao na imagem, decrição-->
-                            Case;
+                            testes
                         </li>
 
                         <li class="card-item">
 
-                            Isqueiro;
+                            materiais
                         </li>
                         <li class="card-item">
 
-                            acessório
+                            experimentações
                         </li>
 
                     </ul>
@@ -406,7 +408,7 @@
                 </div>
 
                 <div class="descricao-button">
-                    <a href="https://www.linkedin.com/in/gustavo-feriani/" target="_blank">
+                    <a href="https://br.linkedin.com/in/vitor-akamine-704593260" target="_blank">
 
                         <button class="btn btn-primary">
                             <span> Conecte-se Comigo </span>
@@ -430,21 +432,21 @@
 
                     <h3> Formação </h3>
 
-                    <h4> Inteligência Artificial </h4>
-                    <span> Fev 2024 </span>
+                    <h4> Design de Produtos </h4>
+                    <span> Agosto de 2022 - o momento</span>
 
                     <div class="sobre-icones">
                         <i class="bi bi-bank"> </i>
-                        <span>Cruzeiro do Sul </span>
+                        <span>Fatec Tatuapé - Victor Civita </span>
                     </div>
 
                     <div class="sobre-icones">
                         <i class="bi bi-mortarboard"> </i>
-                        <span> Pós Graduação </span>
+                        <span> Tecnológo </span>
                     </div>
 
                     <br> <br>
-                    <!-- Nova Formação  -->
+                    <!-- Nova Formação  
                     <h4> Sistemas para Internet </h4>
 
                     <span> 2020 - 2022 </span>
@@ -458,17 +460,24 @@
                         <i class="bi bi-award-fill"> </i>
                         <span> Tecnólogo </span>
                     </div>
-
+  -->
                 </div>
 
                 <div class="row2">
 
                     <h3> Experiências </h3>
 
-                    <h4> Instrutor </h4>
-                    <span> Senai </span>
+                    <h4> Estagiário em operações comerciais </h4>
+                    <span> Westwing Brasil </span>
 
-                    <p> Instrutor de treinamentos para Dev Front-End e cursos de informática.</p>
+                    <p> Maio de 2024 - o momento <br> Responsável pelo cadastro e acompanhamento de pordutos do setor
+                        têxtil do ecommerce.</p>
+                    <br>
+                    <h4> Estagiário em Criação </h4>
+                    <span> Estúdio 196 Branding & Desing </span>
+
+                    <p> Abril de 2023 - Maio de 2024 <br> Desenvolvimento de embalagens e identidads visuais para
+                        diferentes setores </p>
 
                 </div>
 
@@ -561,46 +570,46 @@
                 </botton>
             </a>
             <br>
-            <div class="form-contato">
-                <form action="https://formspree.io/f/xovqbnaz" method="post">
-                    <!-- formspree - codigo aberto para criar caixas de formulário para contatos  -->
-
-                    <label for="name">Nome Completo</label><!-- etiqueta -->
-                    <input type="text" name="name" placeholder="Nome Completo" required> <!-- campo de preenchimento -->
-
-                    <br>
-                    <label for="name">E-mail</label>
-                    <input type="email" name="email" id="email" placeholder="E-mail" required>
-                    <br>
-                    <label for="Telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" 
-                     pattern="\d{11}" required>
-                    <label for=""> Data de nascimento</label>
-                    <br>
-                    <input type="date" name="data de nascimento" required>
-                    <button type="submit">
-                        Enviar
-                    </button>
- <!-- pattern="\(\d{2}\) \d{5}-\d{4}" exige formato com () e -
- ou  pattern="\d{11}" considera apena 11 caracteres-->
-     
-            </div>
-         <!--    <button type="submit">
-                Enviar
-            </button> -->
-
-            </form>
-
-
-
-
-
-
-
-
-
 
         </ul>
+
+        <div class="form-contato">
+            <form action="https://formspree.io/f/xovqbnaz" method="post">
+                <!-- formspree - codigo aberto para criar caixas de formulário para contatos  -->
+
+                <label for="name">Nome Completo</label><!-- etiqueta -->
+                <input type="text" name="name" placeholder="Nome Completo" required> <!-- campo de preenchimento -->
+
+                <label for="name">E-mail</label>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+
+                <label for="Telefone">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" placeholder=" Tel: (xx) xxxxx-xxxx" pattern="\d{11}"
+                    required>
+
+                <label for="date" class="form-date"> Data de nascimento</label>
+                <input type="date" name="date" required>
+
+                <label for="duvidas">Dúvidas</label>
+                <textarea type="text" placeholder="Digite sua mensagem aqui" rows="5" name="duvidas"
+                    required></textarea>
+
+                <button type="submit">
+                    Enviar
+                </button>
+                <!-- pattern="\(\d{2}\) \d{5}-\d{4}" exige formato com () e -
+ou  pattern="\d{11}" considera apena 11 caracteres-->
+            </form>
+        </div>
+        <!--    <button type="submit">
+            Enviar
+        </button> -->
+
+
+
+
+
+
     </section>
     <!-- fim contato  -->
 
@@ -620,7 +629,8 @@
         </p>
 
     </footer>
-
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 
 </body>
